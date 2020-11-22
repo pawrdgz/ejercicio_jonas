@@ -104,7 +104,8 @@ h3,
 }
 
 h1 {
-    font-size: 3.6rem; /*Tamaño de fuente: 36px */
+    font-size: 4.8rem; /*Tamaño de fuente: 36px */
+    font-weight: normal;
     line-height: 1.1;
     margin-top: 3.6rem;
     margin-right: 9rem;
@@ -175,15 +176,37 @@ a:active {
 }
 
 .square {
-    position: relative;
+    position: absolute;
     z-index: -1;
+    bottom: -1.3rem;
     height: 28rem;
     width: 56rem;
-    background-color: #555;
+    background-color: rgb(218, 218, 218);
 }
 
 
 
+/*--------SOBRE-MI----------*/
+
+
+
+/*---------------IMGS HOME---------*/
+
+.portada{
+    position: relative;
+    z-index: -2;
+    margin-top: 3rem;
+}
+
+.profile {
+    width: 60rem;
+    height: 60rem;
+    object-fit: cover;
+    object-position: 50% 50%;
+    background: url(https://estaticos.muyinteresante.es/uploads/images/article/5d2ee2db5cafe8185c4b7544/akira-2.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+}
 
 /*-----------BUTTONS----------*/
 
@@ -199,9 +222,64 @@ a:active {
     margin-left: 4.6rem;
 }
 
+.proyecto {
+    height: 4rem;
+    width: 18rem;
+    background-color: white;
+    border: 1px solid #A956D0;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color:#A956D0;
+    margin-top: 4rem;
+    margin-left: 4.6rem;
+}
+
+.contactame {
+    height: 4rem;
+    width: 18rem;
+    background-color: white;
+    border: 1px solid #A956D0;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color:#A956D0;
+    margin-top: 4rem;
+    margin-left: 4.6rem;
+}
+
 /*-------------FOOTER-------------------*/
 .footer {
     background: #1a1a1a;
     color: #ffffff;
     height: 6rem;
+}
+
+/*-----------PORTFOLIO---------------*/
+
+.img-sanderson {
+    height: 85.7rem;
+    width: 100%;
+  
+}
+
+.sanderson {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-right: 4rem;
+    padding-left: 4.5rem;
+}
+
+.h2-sanderson {
+    font-size: 3.6rem; /*Tamaño de fuente: 36px */
+    font-weight: normal;
+    line-height: 1.1;
+    margin-top: 3.6rem;
+    margin-right: 9rem;
+    margin-left: 4.6rem;
+}
+
+hr {
+    width:40%; 
+    margin-left:30% !important; 
+    margin-right:30% !important;
 }
