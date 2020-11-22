@@ -1,0 +1,170 @@
+/* Based on: https://dev.to/hankchizljaw/a-modern-css-reset-6p3 */
+/* ----------------------- RESET ------------------ */
+/**
+ * Box sizing rules
+ * https://developer.mozilla.org/es/docs/Web/CSS/box-sizing
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+    list-style: none;
+}
+
+/* a Elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Natural flow and rhythm in article sby default */
+article > * + * {
+    margin-top: 1rem;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------GLOBAL--------------*/
+
+html {
+    font-size: 62.5%; /* Tipografía base: 10px */
+}
+
+body {
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.6rem; /*Tamaño de fuente 16px */
+    line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+.secondary-font {
+    font-family: "Crimson Text", "Palatino Lynotipe", "Book Antiqua", "Palatino", serif;
+}
+
+h1 {
+    font-size: 3.6rem; /*Tamaño de fuente: 36px */
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 3.2rem; /*Tamaño de fuente: 32px */
+    line-height: 1.88;
+}
+
+/* Links colores de selección */
+a {
+    color: #a956d0;
+    text-decoration: none;
+}
+
+a:hover{
+    color: peru;
+} 
+
+
+a:active {
+    color:lightblue;
+  }
+
+/*-------------UTILITES-------------*/
+
+/* El wrapper nos va a servir para aplicar la misma clase a distintas cosas */
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 128rem;
+    padding: 0 1rem;
+}
+
+/*-------------HEADER----------------*/
+
+.header {
+    padding-top: 3.3rem;
+}
+
+/*-------------HEADER NAV----------------*/
+
+.logo {
+    position: relative;
+    display: inline;
+    height: 3rem;
+}
+
+.navigation {
+    float: right;
+}
+
+.navigation,
+.nav-item{
+    display: inline-block;
+    padding-left: 5rem;
+}
+
+/*-------------FOOTER-------------------*/
+.footer {
+    background: #1a1a1a;
+    color: #ffffff;
+    height: 6rem;
+}
