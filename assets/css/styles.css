@@ -63,7 +63,7 @@ img {
 
 /* Natural flow and rhythm in article sby default */
 article > * + * {
-    margin-top: 1rem;
+    margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -106,10 +106,6 @@ h3,
 h1 {
     font-size: 4.8rem; /*Tamaño de fuente: 36px */
     font-weight: normal;
-    line-height: 1.1;
-    margin-top: 3.6rem;
-    margin-right: 9rem;
-    margin-left: 4.6rem;
 }
 
 h2 {
@@ -132,6 +128,11 @@ a:active {
     color:lightblue;
   }
 
+  p + p {
+    margin: 1.5rem 0 0;
+  }
+
+
 /*-------------UTILITES-------------*/
 
 /* El wrapper nos va a servir para aplicar la misma clase a distintas cosas */
@@ -142,13 +143,63 @@ a:active {
     padding: 0 1rem;
 }
 
+.button {
+    background: #a956d0;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    line-height: 1;
+    min-width: 18rem;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0 0 ;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .button__portfolio {
+
+    border: 1px solid #A956D0;
+    border-radius: 2px;
+    color: #A956D0;
+    background: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    line-height: 1;
+    min-width: 18rem;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0 0 ;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+hr {
+    width:40%; 
+    margin-left:30% !important; 
+    margin-right:30% !important;
+    margin-top: 10rem;
+}
+
 /*-------------HEADER----------------*/
 
 .header {
-    padding-top: 3.3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
 }
 
-/*-------------HEADER NAV----------------*/
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*-------------NAVIGATION----------------*/
 
 .logo {
     position: relative;
@@ -156,94 +207,84 @@ a:active {
     height: 3rem;
 }
 
-.navigation {
+.menu-open, 
+.menu-close {
     float: right;
-}
-
-.navigation,
-.nav-item{
     display: inline-block;
-    padding-left: 5rem;
+    margin-left: 0 0 5rem;
 }
 
-
-/*--------TITLE-------*/
-
-.title {
-    display: flex;
-    flex-direction: column;
-    padding: 5.8rem;
+.menu-open, 
+.menu-close {
+    display: inline;
 }
 
-.square {
-    position: absolute;
-    z-index: -1;
-    bottom: -1.3rem;
-    height: 28rem;
-    width: 56rem;
-    background-color: rgb(218, 218, 218);
+.navigation {
+    display: none;
+}
+  
+.menu-close {
+    display: none;
 }
 
 
 
-/*--------SOBRE-MI----------*/
 
+/*-------------BILLBOARD----------------*/
 
+.billboard {
+    margin: 0 0 3rem;
+}
 
-/*---------------IMGS HOME---------*/
-
-.portada{
+.billboard .wrapper {
+    overflow: hidden;
     position: relative;
-    z-index: -2;
-    margin-top: 3rem;
+    max-height: 90vh;
 }
 
-.profile {
-    width: 60rem;
-    height: 60rem;
-    object-fit: cover;
-    object-position: 50% 50%;
-    background: url(https://estaticos.muyinteresante.es/uploads/images/article/5d2ee2db5cafe8185c4b7544/akira-2.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
+.billboard__title,
+.billboard__description,
+.billboard__image {
+    margin: 0 0 2rem;
 }
 
-/*-----------BUTTONS----------*/
-
-.about {
-    height: 4rem;
-    width: 18rem;
-    background-color: #A956D0;
-    border: none;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    color: white;
-    margin-top: 4rem;
-    margin-left: 4.6rem;
+.billboard__content {
+    max-width: 56rem;
 }
 
-.proyecto {
-    height: 4rem;
-    width: 18rem;
-    background-color: white;
-    border: 1px solid #A956D0;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    color:#A956D0;
-    margin-top: 4rem;
-    margin-left: 4.6rem;
+/*-------------ABOUT----------------*/
+
+.about__content {
+    padding: 3rem 0;
 }
 
-.contactame {
-    height: 4rem;
-    width: 18rem;
-    background-color: white;
-    border: 1px solid #A956D0;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    color:#A956D0;
-    margin-top: 4rem;
-    margin-left: 4.6rem;
+.profile-picture {
+    background: url(../imgs/profile.jpg) 50% no-repeat;
+    background-size: cover;
+    max-width: 32rem;
+}
+
+.profile-picture::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+    width: 100%;
+}
+
+
+/*-------------CONTACT------------------*/
+
+.contact {
+    text-align: center;
+}
+
+.text__contact {
+    font-family: Crimson Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.2rem;
+    line-height: 1.5;
+    text-align: center; 
 }
 
 /*-------------FOOTER-------------------*/
@@ -278,8 +319,87 @@ a:active {
     margin-left: 4.6rem;
 }
 
-hr {
-    width:40%; 
-    margin-left:30% !important; 
-    margin-right:30% !important;
-}
+
+
+
+/* ----------------------- RESPONSIVE 960px ------------------ */
+@media (min-width: 60em) {
+    /* ----------------------- UTILITIES ------------------ */
+  
+    .row {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+  
+    .column {
+      width: 50%;
+    }
+  
+
+    /*---------------------NAVIGATION-------------------*/
+
+    .menu-open {
+        display: none;
+      }
+      
+    .menu-close {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+        display: inline;
+        height: 3rem;
+    }
+    
+    .navigation {
+        float: right;
+    }
+    
+    .navigation,
+    .nav-item{
+        display: inline-block;
+        padding-left: 5rem;
+    }
+
+    /* ----------------------- BILLBOARD ------------------ */
+
+    .billboard__image {
+      margin: 0;
+    }
+  
+    .billboard__content {
+      background: #fff;
+      bottom: 0;
+      left: 4rem;
+      padding: 2rem 2rem 0.5rem;
+      position: absolute;
+    }
+  
+    /* ----------------------- ABOUT ------------------ */
+  
+    .about__content {
+      padding: 3rem 6rem;
+    }
+  
+    .profile-picture {
+      max-width: initial;
+    }
+
+    /*-----------CONTACT--------------*/
+
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text__contact {
+        max-width: 64rem;
+        font-size: 6.4rem;
+        padding: 0 15rem 0 0;
+    }
+  }
+  /* ----------------------- END RESPONSIVE 960px ------------------ */
